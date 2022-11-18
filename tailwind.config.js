@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('./node_modules/tailwindcss/plugin')
+const plugin = require('./node_modules/tailwindcss/plugin');
 
 module.exports = {
-  content: ['./public/**/*.{html,js}'],
+  content: [
+    'index.html',
+    './public/**/*.{html,js}',
+  ],
   theme: {
     container:{
       center: true,
@@ -11,7 +14,7 @@ module.exports = {
         lg: '1024px',
         xl: '1280px',
         '2xl': '1536px',
-      },
+      }, 
     },
     colors:{
       transparent: 'transparent',
@@ -32,7 +35,7 @@ module.exports = {
       xl: ['1.25rem'],
       '2xl': ['1.8rem',],
       '4xl': ['2.25rem'],
-      '6xl': ['3.75rem'],
+      '6xl': ['3.75rem'], 
       '8xl': ['6rem'],
     },
     spacing: {
@@ -50,15 +53,16 @@ module.exports = {
       6: '6rem',
       7: '7rem',
       8: '8rem',
-      9: '9rem',
+      9: '9rem', 
       10: '10rem',
-    },
+    }, 
 
-    extend: {},
+    extend: {},  
   },
 
   plugins: [
-    plugin(function({ addComponents, addBase, theme }) {
+    plugin(function({ addComponents, theme }) {
+      
       addComponents({
         '.btn': {
           padding: '.8rem 1.6rem',
@@ -69,7 +73,7 @@ module.exports = {
         '.btn-primary' : {
           background: theme('colors.primary.DEFAULT'),
           transition: '0.5s background',
-
+ 
           '&:hover': {
             background: theme('colors.primary.hover')
           },
@@ -77,13 +81,13 @@ module.exports = {
             background: theme('colors.primary.active')
           }
         },
-        '.h1': { fontSize: theme('fontSize.6xl'), fontWeight:500,},
-        '.h2': { fontSize: theme('fontSize.4xl'), fontWeight:500 },
-        '.h3': { fontSize: theme('fontSize.2xl'), fontWeight:500 },
-        '.h4': { fontSize: theme('fontSize.xl'), fontWeight:500 }
+        '.h1': { fontSize: theme('fontSize.6xl'), fontWeight:600,},
+        '.h2': { fontSize: theme('fontSize.4xl'), fontWeight:600 },
+        '.h3': { fontSize: theme('fontSize.2xl'), fontWeight:600 },
+        '.h4': { fontSize: theme('fontSize.xl'), fontWeight:600 }
       })
 
     }),
   ],
-}
+} 
  
