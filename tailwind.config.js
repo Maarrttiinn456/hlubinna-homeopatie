@@ -73,7 +73,9 @@ module.exports = {
       9: '9rem', 
       10: '10rem',
       30: '30rem',
-      50: '50rem'
+      40: '40rem',
+      50: '50rem',
+      60: '60rem'
     },
 
     extend: {},  
@@ -100,6 +102,7 @@ module.exports = {
             background: theme('colors.primary.active')
           }
         },
+
         '.h1': { fontSize: theme('fontSize.8xl'), fontWeight:600,},
         '.h2': { fontSize: theme('fontSize.6xl'), fontWeight:600 },
         '.h3': { fontSize: theme('fontSize.4xl'), fontWeight:600 },
