@@ -10,58 +10,147 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--Icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="./public/output.css">
 
     <title>Hlubinná homeopatie</title>
 </head>
-<body>
-    <div class="container">
-        <div class="mb-2">
-            <h1 class="h1 text-primary-text">Hlubinná homeopatie</h1>
-            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit autem tempora laborum incidunt
-                eaque quis illum officia illo totam sit perferendis iure officiis, culpa omnis, facere quaerat adipisci tenetur
-                blanditiis!</div>
-        </div>
-        <div class="mb-2">
-            <h2 class="h2 text-primary-text">Hlubinná homeopatie</h2>
-            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit autem tempora laborum incidunt
-                eaque quis illum officia illo totam sit perferendis iure officiis, culpa omnis, facere quaerat adipisci tenetur
-                blanditiis!</div>
-        </div>
-        <div class="mb-2">
-            <h3 class="h3 text-primary-text">Hlubinná homeopatie</h3>
-            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit autem tempora laborum incidunt
-                eaque quis illum officia illo totam sit perferendis iure officiis, culpa omnis, facere quaerat adipisci tenetur
-                blanditiis!</div>
-        </div>
-        <div class="mb-10">
-            <h4 class="h4 text-primary-text">Hlubinná homeopatie</h4>
-            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit autem tempora laborum incidunt
-                eaque quis illum officia illo totam sit perferendis iure officiis, culpa om nis, facere quaerat adipisci tenetur
-                blanditiis!</div>
-        </div>
-        
-        
-
-        <div class="bg-primary text-white test">
-            primary
-        </div>
-        <div class="bg-primary-hover text-white">
-            primary:hover
-        </div>
-        <div class="bg-primary-active text-white">
-            primary:active
-        </div>
-
-        <div class="btn btn-primary mt-2 text-white">
-            test hoveru a activu
+<body>    
+    <section class="bg-primary">
+        <div class="container">
+            <nav>
+                <div class="flex justify-end items-center text-white h-6">
+                    <div class="mr-3 cursor-pointer hover:border-b">O mně</div>
+                    <div class="mr-3 cursor-pointer hover:border-b">Články</div>
+                    <div class="cursor-pointer hover:border-b">Kontakty</div>
+                </div>
+            </nav>
         </div> 
+    </section>
+    <section class="my-4 sm:my-5">
+        <div class="container">
+            <h1 class="h2 sm:h1 text-primary">Hlubinná homeopatie</h1>
+            <div class="flex flex-col items-end justify-between w-100 lg:flex-row lg:items-baseline mt-1">
+                <div class="text-xl sm:text-xl font-bold text-primary">klasická homeopatie v novém podání</div>
+                <div class="bg-primary text-sm font-bold p-y-0.5 px-1 text-white inline-flex mt-1 lg:mt-0">MUDr. Josef Schuster</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="h-30 md:h-50 bg-cover bg-bottom" style="background-image: url('./public/img/hero_section.jpg');">
         
-    </div> 
+    </section>
+
+    <section class="my-5 sm:my-10">
+        <div class="container">
+            <div class="js-tab mb-5">
+                <div class="js-tab-heading border-b border-primary pb-0.5 cursor-pointer">
+                    <div class="flex justify-between px-1">
+                        <div class="h4 text-primary">O hlubinné homeopatii</div>
+                        <div>
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff" stroke="#195c84" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                <line class="plus hidden" x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="js-tab-content mt-4 w-10/12 sm:w-3/4 m-auto text-lg">
+                    Kombinací nejnovějších poznatků na poli homeopatie spolu s psychologií byl vyvinut nový způsob odebírání homeopatických
+                    případů tzv. anamnézy, díky kterému lze proniknout hluboko ke kořenům potíží neboli nemoci. Homeopatikum předepsané na
+                    této hluboké úrovni má silný a trvalý účinek a dokáže opět nastolit harmonii, což znamená zdraví na tělesné i duševní
+                    rovině.
+                </div>
+            </div>
+
+            <div class="js-tab mb-5">
+                <div class="js-tab-heading border-b border-primary pb-0.5 cursor-pointer">
+                    <div class="flex justify-between px-1">
+                        <div class="h4 text-primary">O metodě</div>
+                        <div>
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff" stroke="#195c84" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                <line class="minus" x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg> 
+                        </div>
+                    </div>
+                </div>
+                <div class="js-tab-content mt-4 w-10/11 sm:w-3/4 m-auto text-lg hidden">
+                    Hlubinná homeopatie je syntézou západního a východního filozofického pohledu. Západní pilíř je reprezentován myslí,
+                    levou mozkovou hemisférou. Je to věda. V praxi jde o sbírání symptomů pacienta a vyhodnocování jejich důležitosti a
+                    následné hledání léku pomocí repertorií a materií medik, dnes nejčastěji pomocí počítačových programů.
+                    <br>
+                    <br>
+                    Východní pilíř je reprezentován intuicí, pravou mozkovou hemisférou. Je to umění. V praxi jde o vnímání homeopatických
+                    léků jako součást systémů, zejména biologických říší ( minerální, rostlinná, živočišná) a miasmatických skupin ( v
+                    pojetí deseti miasmat dle Sankarana).
+                    <br>
+                    <br>
+                    Hlubinná homeopatie je tedy vpravdě celostní metodou.
+                </div>
+            </div>
+
+            <div class="js-tab">
+                <div class="js-tab-heading border-b border-primary pb-0.5 cursor-pointer">
+                    <div class="flex justify-between px-1">
+                        <div class="h4 text-primary">O mně</div>
+                        <div>
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff" stroke="#195c84" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                <line class="minus" x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="js-tab-content mt-4 w-10/11 sm:w-3/4 m-auto text-lg hidden">
+                    Vystudoval jsem lékařskou fakultu Univerzity Karlovy a po promoci v roce 1988 jsem nastoupil jako chirurg do nemocnice.
+                    Přišel rok 1989, s ním sametová revoluce, otevřely se nové možnosti ve všech oblastech života, včetně alternativních
+                    směrů. Asi ne náhodou jsem se dostal k holotropnímu dýchání.
+                    <img class="pt-2 pr-3 pb-2"
+                        style="float: left;width:45%;border-top-right-radius: 5rem;border-bottom-right-radius: 5rem;"
+                        src="./public/img/tata.jpg" alt="">
+                    Holotropní dýchání úplně změnilo můj náhled na svět, který do té doby znal jen" materialistický vědecký světový názor",
+                    hlásaný bývalou totalitní ideologií. Přibližně ve stejné době jsem zjistil, že nedokážu klasickou školní medicínou
+                    pomoci svým blízkým s chronickými obtížemi. Tak jsem objevil homeopatii, nejprve formou homeopata, který mým blízkým
+                    opravdu pomohl.
+                    <br><br>
+                    Začal jsem se o homeopatii více zajímat, studoval jsem vše, co se dalo. Souběžně s tím běžela má chirurgická dráha -
+                    1.atestace z chirurgie, 2.atestace z chirurgie, spousta provedených operací..
+                    <br>
+                
+                    Po složení 2.atestace z chirurgie už jsem nemusel veškerou energii věnovat studiu chirurgie, tak zbylo více času na mou
+                    „tajnou lásku" homeopatii. Začal jsem navštěvovat kurzy Homeopatické akademie v Praze. Zde na jedné přednášce
+                    zahraničního lektora jsem poprvé slyšel o Rajanu Sankaranovi a jeho indické škole. Hluboce mě to oslovilo, okamžitě jsem
+                    věděl, že takto chci homeopatii dělat.
+                    <br>
+                    <br>
+                    Shodou okolností jsem už v té době pracoval v Německu, kde jsou všechny publikace a knihy Rajana Sankarana bez problémů
+                    dostupné. Začal jsem intenzivně studovat jeho teorii. Praxi této metody jsem si osvojil na seminářích vedených přímo Dr.
+                    Sankaranem v Německu.
+                    <br>
+                    <br>
+                    Kromě seminářů u Dr. Sankarana jsem absolvoval řadu dalších pravidelných seminářů u Maheshe Gandhího, Michal Yakir, Jana
+                    Scholtena, Sunila Ananda a Jayeshe Shaha . Velmi cenná pro mě jsou má setkávání s mými homeopatickými kolegy na
+                    zahraničních kongresech a seminářích. Za všechny uvádím např. Mika Keszlera, Andrease Hollinga, Williho Neuholda, Anne
+                    Schadde, ale celý výčet by byl mnohem delší. Pravidelná setkávání s nimi, diskuse a výměny zkušeností považuji za to
+                    nejcennější, čeho se mi na mé homeopatické cestě dostává.
+                    <br>
+                    <br>
+                    A v neposlední řadě jsou to mí pacienti, díky kterým se stále učím a díky kterým vidím, že to, co děláme, má hlubší
+                    smysl. Jsem vděčný jim, i osudu, že mohu být na chvíli součástí jejich cesty.
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
         crossorigin="anonymous"></script>
     <script src="./public/js/main.js"></script>
-
 </body>
 </html>    

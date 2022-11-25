@@ -5,8 +5,13 @@
 @layer base {
     html {
         font-family: 'Montserrat', sans-serif;
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.6rem;
     }
     .h1,.h2,.h3,.h4{
         font-family: 'Open Sans', sans-serif;
+        line-height: 1.2;
     }
 }

@@ -13,14 +13,13 @@ module.exports = {
       screens: {
         lg: '1024px',
         xl: '1280px',
-        '2xl': '1536px',
       }, 
     },
     colors:{
       transparent: 'transparent',
       primary: {
         text: '#195c84',
-        DEFAULT: '#154d6e',
+        DEFAULT: '#113E59',
         hover: '#195c84',
         active: '#113e59',
       },
@@ -28,15 +27,15 @@ module.exports = {
       black: '#000'
     },
     fontSize: {
-      xs: ['0.75rem'],
-      sm: ['0.875rem'],
-      base: ['1rem'],
-      lg: ['1.125rem'],
-      xl: ['1.25rem'],
-      '2xl': ['1.8rem',],
-      '4xl': ['2.25rem'],
-      '6xl': ['3.75rem'], 
-      '8xl': ['6rem'],
+      xs: ['1rem'],
+      sm: ['1.4rem'],
+      base: ['1.6rem'],
+      lg: ['1.8rem'],
+      xl: ['2rem'],
+      '2xl': ['3rem',],
+      '4xl': ['4rem'],
+      '6xl': ['5rem'], 
+      '8xl': ['6rem'] ,
     },
     spacing: {
       px: '1px', 
@@ -55,7 +54,27 @@ module.exports = {
       8: '8rem',
       9: '9rem', 
       10: '10rem',
-    }, 
+    },
+    height: {
+      px: '1px', 
+      0: '0',
+      0.5: '0.5rem',
+      1: '1rem',
+      1.5: '1.5rem',
+      2: '2rem',
+      2.5: '2.5rem',
+      3: '3rem',
+      3.5: '3.5rem',
+      4: '4rem',
+      5: '5rem',
+      6: '6rem',
+      7: '7rem',
+      8: '8rem',
+      9: '9rem', 
+      10: '10rem',
+      30: '30rem',
+      50: '50rem'
+    },
 
     extend: {},  
   },
@@ -81,10 +100,10 @@ module.exports = {
             background: theme('colors.primary.active')
           }
         },
-        '.h1': { fontSize: theme('fontSize.6xl'), fontWeight:600,},
-        '.h2': { fontSize: theme('fontSize.4xl'), fontWeight:600 },
-        '.h3': { fontSize: theme('fontSize.2xl'), fontWeight:600 },
-        '.h4': { fontSize: theme('fontSize.xl'), fontWeight:600 }
+        '.h1': { fontSize: theme('fontSize.8xl'), fontWeight:600,},
+        '.h2': { fontSize: theme('fontSize.6xl'), fontWeight:600 },
+        '.h3': { fontSize: theme('fontSize.4xl'), fontWeight:600 },
+        '.h4': { fontSize: theme('fontSize.2xl'), fontWeight:600 }
       })
 
     }),
