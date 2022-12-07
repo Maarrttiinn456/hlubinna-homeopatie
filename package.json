@@ -21,6 +21,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "tiny-slider": "^2.9.4"
   }
 }

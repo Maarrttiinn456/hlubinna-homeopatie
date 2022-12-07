@@ -24,6 +24,7 @@ module.exports = {
         active: '#113e59',
       },
       white: '#fff',
+      shadow: '#d5d5d5',
       black: '#000'
     },
     fontSize: {
@@ -54,6 +55,9 @@ module.exports = {
       8: '8rem',
       9: '9rem', 
       10: '10rem',
+      15: '15rem',
+      20: '20rem',
+      25: '25rem',
     },
     height: {
       px: '1px', 
