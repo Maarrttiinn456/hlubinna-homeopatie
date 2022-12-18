@@ -76,10 +76,15 @@ module.exports = {
       8: '8rem',
       9: '9rem', 
       10: '10rem',
+      15: '15rem',
+      20: '20rem',
       30: '30rem',
       40: '40rem',
       50: '50rem',
       60: '60rem'
+    },
+    maxWidth: {
+      '4/5': '80%',
     },
 
     extend: {},  

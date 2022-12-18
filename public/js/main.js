@@ -25,17 +25,17 @@ for(let i = 0; i < all_articles.length; i++)
     container_slider.innerHTML += `
         <div class="bg-center-cover articles-slider-item h-50 md:h-60" style="background-image: url(${article.image}) ;">
             <div class="container min-h-full flex flex-col justify-between px-5 sm:px-10 md:px-15 py-5 md:py-10">
-                <div>
-                    <div class="text-white h4 md:h3">${article.title}</div>
+                <div class="px-2 sm:px-0">
+                    <div data-id="${i}" class="text-white h4 md:h3 js-show-modal cursor-pointer">${article.title}</div>
                     <div class="text-white mt-3 text-sm  md:text-base">
                         ${article.perex}
                     </div>
                 </div>
-                <div class="flex justify-center sm:justify-between items-center text-white w-full">
+                <div class="flex justify-center md:justify-between items-center text-white w-full">
                     <div class="h2 text-shadow hidden md:block">
                         ${counter}
                     </div>
-                    <div data-id="${i}" class="text text-primary font-bold bg-white px-2 py-1 js-show-modal cursor-pointer z-50"> 
+                    <div data-id="${i}" class="text text-white font-bold js-show-modal cursor-pointer z-50 hover:underline transition duration-500"> 
                         Číst více...
                     </div>
                 </div>
@@ -51,12 +51,22 @@ for(let i = 0; i < all_articles.length; i++)
     let article = all_articles[i];
 
     conatiner_all_articles.innerHTML += `
-        <div data-id="${i}" class="articles-grid bg-center-cover flex justify-center items-center js-articles-grid cursor-pointer px-2 py-2 js-show-modal" style="background-image: url(${article.image});">
-            <div class="js-articles-grid-heading text-2xl text-white font-semibold text-center">${article.title}</div>
-            <div class="js-articles-grid-text text-white text-left hidden text-sm">${article.perex}</div>
+        <div class="flex flex-col justify-between shadow-md hover:shadow-lg transition duration-300">
+            <div>
+                <div data-id="${i}" class="px-2 h-20 flex items-end font-semibold js-show-modal cursor-pointer bg-center-cover" style="background-image: url(${article.image});">
+
+                    <div class="inline-flex px-1 py-1 bg-white text-primary text-lg  max-w-4/5 hover:underline">
+                        ${article.title}
+                    </div>
+                </div>
+                <div class="text-sm mt-2 px-2">${article.perex}</div>
+            </div>
+            <div data-id="${i}"
+                class="inline-flex justify-end mt-2 px-2 mb-2 text-primary text-sm font-semibold text-right cursor-pointer js-show-modal hover:underline">Číst
+                více</div>
         </div>
     `
-}
+} 
 
 
 
@@ -68,7 +78,7 @@ $(document).on('click', '.js-show-modal', function(){
 
     let number_articles = $(this).data('id');
     let arctcles_heading = all_articles[number_articles].title;
-    let articles_content = all_articles[number_articles].perex;
+    let articles_content = all_articles[number_articles].text;
     let articles_img = all_articles[number_articles].image;
 
     $('.js-modal-heading').html(arctcles_heading);
@@ -76,9 +86,6 @@ $(document).on('click', '.js-show-modal', function(){
     $('.js-modal-img').attr('src', articles_img)
 
 })
-
-
-
 
 
 
@@ -110,8 +117,13 @@ var articles_slider = tns({
     edgePadding: 0,
     swipeAngle: false,
     speed: 400,
+    touch: false,
     
     responsive: {
+        767:{
+            touch: true
+        },
+
         1500: {
             items: 1,
             edgePadding: 200,
@@ -121,6 +133,11 @@ var articles_slider = tns({
 
 
 
+
+$(document).on('click', '.slider-switcher-item', function(){
+    $('.slider-switcher-item').removeClass('active')
+    $(this).addClass('active')
+})
 
 $( document ).ready(function() {
     //Musím skrý vše spojené se sliderem
@@ -154,3 +171,40 @@ $( document ).ready(function() {
 
 
 
+$(document).on('click', '.js-nav-scroll', function(e){
+    e.preventDefault()
+    const scrollTo = '#'+$(this).attr('data-slide')
+
+    $('html, body').animate({
+        scrollTop: $(scrollTo).offset().top
+    }, 500);
+
+
+    $(scrollTo).find('.js-tab-content').show()
+    $(scrollTo).find('.js-tab-content').closest('.js-tab').find('.minus').hide()
+
+})
+
+
+
+$("#contact-form").validate({
+    rules:{
+        name: "required",
+        surname: "required",
+        email:{
+            required:true,
+            emial:true
+        }
+    },
+    messages:{
+        name: "Vyplňte prosím jméno",
+        surname: "Vyplňte prosím příjmení",
+        email: "Vyplňte prosím e-mail",
+    },
+    submitHandler: function(form) {
+
+        
+
+        form.submit();
+    }
+ });
