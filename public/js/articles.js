@@ -4,7 +4,7 @@ export let articles = [
     {
         "autor": "Josef Schuster",
         "title": "Co je hlubinná homeopatie",
-        "image": "./public/img/img_02.jpg",
+        "image": "../public/img/img_02.jpg",
         "path":  "co-je-to-hlubinna-homeopatie",
         "perex": "Hlubinná homeopatie je nový směr, který ve světě získává stále více stoupenců mezi homeopaty, a to především díky skvělým výsledkům v homeopatické léčbě. Jde o kombinaci metod klasické konstituční homeopatie s evoluční psychologií a Sankaranovou bombajskou školou (Sensational Homeopathy).",
         "text": `
@@ -224,7 +224,6 @@ export let articles = [
         "image": "./public/img/img_04.jpg",
         "perex": "Homeopatie jako léčebná metoda u pacientů s psychiatrickými diagnózami, tak zněl přibližný překlad názvu semináře, kterého jsem se zúčastnil letos v červenci (2010).",
         "text": `
-            <br><br>
             Homeopatie jako léčebná metoda u pacientů s psychiatrickými diagnózami,
             <br><br>
             tak zněl přibližný překlad názvu semináře, kterého jsem se zúčastnil letos v červenci (2010). Konal se v malebném městečku Wessling, cca 20 km západně od Mnichova (SRN) a vedl jej věhlasný indický psychiatr a homeopat Dr. Mahesh Gandhí. Dr.Gandhí je členem Sankaranovy Bombajské školy a stál spolu se Sankaranem u zrodu této nové metody, které jsou věnovány celé tyto moje stránky, a pro kterou se ve světě vžil název "The Sensation Method".

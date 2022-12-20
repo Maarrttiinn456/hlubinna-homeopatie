@@ -4,7 +4,9 @@ const plugin = require('./node_modules/tailwindcss/plugin');
 module.exports = {
   content: [
     'index.html',
+    'clanek.html',
     './public/**/*.{html,js}',
+    './clanek/*.{html,js}',
   ],
   theme: {
     container:{
@@ -33,6 +35,7 @@ module.exports = {
       base: ['1.6rem'],
       lg: ['1.8rem'],
       xl: ['2rem'],
+      '1xl': ['2.5rem'],
       '2xl': ['3rem',],
       '4xl': ['4rem'],
       '6xl': ['5rem'], 
@@ -115,7 +118,10 @@ module.exports = {
         '.h1': { fontSize: theme('fontSize.8xl'), fontWeight:600,},
         '.h2': { fontSize: theme('fontSize.6xl'), fontWeight:600 },
         '.h3': { fontSize: theme('fontSize.4xl'), fontWeight:600 },
-        '.h4': { fontSize: theme('fontSize.2xl'), fontWeight:600 }
+        '.h4': { 
+          fontSize: theme('fontSize.2xl'), 
+          fontWeight:600,
+        }
       })
 
     }),
